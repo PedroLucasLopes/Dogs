@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
+:root {
+    /*Colors*/
+    --black: #333;
+    --grey: #666;
+    --grey-light: #ddd;
+    --white: #eee;
+    --white-mid: #fff;
+    --full-white: white;
+
+    --yellow: #fb1;
+    --yellow-light: #fea;
+
+    --brown: #764701;
+
+    --red: #f31;
+
+    /*Typography*/
+    --principal: Helvetica, Arial, sans-serif;
+    --second: 'Spectral', georgia;
+
+    /*Box Shadow Intensity*/
+    --shadow: rgba(0, 0, 0, .1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-family: var(--principal);
+    padding-top: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input {
+    display: block;
+    font-size: 1rem;
+    font-family: var(--principal);
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.container {
+    max-width: 50rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.mainContainer {
+    margin-top: 4rem;
+}
+
+.animeLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animeLeft .3s forwards;
+}
+
+.title {
+    font-family: var(--second);
+    line-height: 1;
+    font-size: 3rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--yellow);
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    border-radius: .2rem;
+    z-index: -1;
+}
+
+@keyframes animeLeft {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}
